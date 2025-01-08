@@ -1,0 +1,22 @@
+#经典例题1 列表中元素改大小写，排序
+
+name=[]
+name.append('JOE')
+name.append('JACK')
+name.append('jane')
+name.append('john')
+name.append('joanna')
+
+name.insert(0,'Jenny')
+name.append('Josephine')
+
+print(name)
+
+titled_name=[]
+for n in name:
+    titled_name.append(n.title())
+
+print(titled_name)
+
+titled_name.sort()
+print(titled_name)
