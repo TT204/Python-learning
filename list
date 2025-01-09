@@ -67,3 +67,6 @@ for site in tourist_site:
     print(message)
     next_visit='I am expected to visit '+site.title()+' next time.\n'  #\n用于下一行前空出一行
     print(next_visit)
+
+#for循环后，没有缩进的代码只执行一次，而不会重复执行。
+print('These are the most amazing places to visit for tourists.')
