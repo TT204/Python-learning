@@ -183,3 +183,41 @@ for player in players[1:4]:
     print(message)
 
 print('It is show time for us!')
+
+# 复制列表。方法是创建一个包含列表里所有元素的切片，方法是同时省略起始索引和终止索引，用list_name[:]
+my_foods=['cream','coffee','cock tail','hot pot']
+
+Jojo_foods=[]
+Jojo_foods=my_foods[:]
+print(Jojo_foods)
+
+print('\nMy favorite foods are:')
+for food in my_foods:
+    print('\t'+food)
+
+print("\nMy friend Jojo's favorite foods are:")
+for food in Jojo_foods:
+    print('\t'+food)
+
+my_foods=['cream','coffee','cock tail','hot pot']
+
+Jojo_foods=my_foods[:]
+
+my_foods.append('toast')
+Jojo_foods.append('Juice')
+
+print(my_foods)
+print(Jojo_foods)
+
+my_foods=['cream','coffee','cock tail','hot pot']
+
+Jojo_foods=my_foods
+#上述代码将使两个列表变成同一个列表。而不是复制一份副本作为第二个列表。
+
+my_foods.append('toast')
+Jojo_foods.append('Juice')
+#此后两处修改都对同一个列表生效
+
+print(my_foods)
+print(Jojo_foods)
+#两个列表的打印完全一样
