@@ -55,3 +55,15 @@ print(tourist_site)
 
 #统计列表元素个数
 len(tourist_site)
+
+#for循环
+
+#循环条件将遍历列表中的每个元素。每个缩进的代码行都是循环的一部分，且将针对列表中的每个值都执行一次。
+
+tourist_site=['Chiangmai','Tokyo','Lhasa','Suzhou','Berlin']
+
+for site in tourist_site:
+    message=site.title()+', a beautiful place you will never forget.'
+    print(message)
+    next_visit='I am expected to visit '+site.title()+' next time.\n'  #\n用于下一行前空出一行
+    print(next_visit)
