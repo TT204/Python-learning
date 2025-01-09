@@ -130,3 +130,31 @@ print(squares)
 #1. 指定一个描述性的列表名。如squares
 #2. 指定左方括号，定义一个表达式用于生成存储到列表中的值。如 n**2
 #3. 编写一个for循环，用于给表达式提供值，再加上右方括号。如 for n in range(1,11).for循环这里没有：
+
+#例题：通过给函数 range()指定第三个参数来创建一个列表，其中包含 1~20 的奇数；再使用一个 for 循环将这些数字都打印出来。
+numbers=[]
+for num in range(1,21,2):
+    print(num)
+    numbers.append(num)
+print(numbers)
+
+for num in numbers:
+    print(num)
+
+#例题：3 的倍数：创建一个列表，其中包含 3~30 内能被 3 整除的数字；再使用一个 for循环将这个列表中的数字都打印出来。
+numbers=[num for num in range(3,31,3)]
+for num in numbers:
+    print(num)
+
+#例题：立方解析
+numbers=[num**3 for num in range(1,11)]
+for n in numbers:
+    print(n)
+
+#例题：立方
+numbers=[]
+for num in range(1,11):
+    numbers.append(num**3)
+for n in numbers:
+    print(n)
+
