@@ -52,3 +52,6 @@ print(tourist_site)
 #永久改变列表元素顺序,按字母倒序排序
 tourist_site.sort(reverse=True)
 print(tourist_site)
+
+#统计列表元素个数
+len(tourist_site)
