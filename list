@@ -584,3 +584,19 @@ elif len(requested_toppings)>0:
         print('Adding '+requested_topping+'.')
     print('Your pizza has been finished!')
     
+
+#例题：检查用户点单pizza时，下单的配料是否在本店可以提供的配料清单里，如果是，添加配料，如果不是，拒绝添加。
+
+#如果本店的配料清单是固定不变的，available_toppings列表可以改为元组。
+available_toppings=['mushrooms','olives',
+                    'green peppers','pepperoni',
+                    'pineapple','extra cheese']
+
+requested_toppings=['mushrooms','french fries','extra cheese']
+
+for requested_topping in requested_toppings:
+    if requested_topping in available_toppings:
+        print('Adding '+requested_topping+' into pizza.')
+    else:
+        print('Sorry, we do not have '+requested_topping+'.')
+print('Your pizza has been finished!')
