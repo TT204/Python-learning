@@ -360,3 +360,117 @@ if user not in banned_users:
 user='marie'
 user='caroline'
 
+
+# 布尔表达式，boolean,条件测试的别名，结果为True or False.
+
+car='subaru'
+print("Is car =='subaru'? I predict True.") #打印字符串
+print(car=='subaru') #打印布尔表达式的结果
+
+print("\nIs car == 'audi'? I predict false.")
+print(car=='audi')
+
+
+#例题：如何将一个列表关联到另一个元组的元素，并间接修改元组
+
+coffee_menu=['americano','latte','Irish coffee','Café au lait','Coffee Whipped Cream']
+buffet=('cream cake',coffee_menu,'steak','wine','paella')
+print(buffet)
+
+coffee_menu.append('Espresso')
+print(buffet)
+
+
+# IF语句语法：
+#if conditional test:
+#    do something
+
+# if-else 结构，检查非此即彼的情形。
+# if-elif-else 结构，检查超过两种情况的情形，多选一测试。
+
+age=12
+
+if age<4:
+    print('Your admission cost is $0.')
+elif age<18:  #第2个if测试，仅在第一个测试未通过时才执行。所以此时年龄>=4.
+    print('Your admission cost is $5.')
+else:
+    print('Your admission cost is $10.')
+
+#以下代码更简洁
+
+age=12
+
+if age<4:
+    price=0
+elif age<18:
+    price=5
+else:
+    price=10
+
+print('Your admission cost is $'+str(price)+'.')
+
+
+#多个elif条件
+age=60
+
+if age<4:
+    price=0
+elif age<18:
+    price=5
+elif age<65:
+    price=10
+else:
+    price=5
+
+print('Your admission cost is $'+str(price)+'.')
+
+
+#elif 替代else
+age=80
+
+if age<4:
+    price=0
+elif age<18:
+    price=5
+elif age<65:
+    price=10
+elif age>=65:
+    price=5
+
+print('Your admission cost is $'+str(price)+'.')
+
+
+#多个if条件测试,多个独立条件测试。无论第一个条件是否满足，都要推进后面的条件测试。
+#如果你只想执行一个代码块，就使用if-elif-else结构；如果要运行多个代码块，就使用一系列独立的if语句。
+
+requested_toppings=['mushrooms','extra cheese']
+
+if 'mushrooms' in requested_toppings:
+    print('Adding mushrooms.')
+if 'pepperoni' in requested_toppings:
+    print('Adding pepperoni.')
+if 'extra cheese' in requested_toppings:
+    print('Adding extra cheese.')
+
+print('\nFinished making your pizza.')
+
+
+#例题：外星人的颜色，判断是否为绿色，是则执行代码，如果不，不执行。
+alien_color in ['green','yellow','red']
+if alien_color=='green':
+    print('The player gained 5 points.')
+
+alien_color='green'
+alien_color='red'
+
+
+#上述例题不能通过for循环实现。
+
+alien_colors=['green','yellow','red']
+
+for alien_color in alien_colors: # for循环，作用是遍历一遍列表,一定会找到符合green的元素
+    if alien_color=='green':
+        print('The player gained 5 points.')
+
+alien_color='red'
