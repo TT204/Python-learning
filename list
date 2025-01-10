@@ -253,3 +253,89 @@ print('\nThe updated cuisine list for buffet is:')
 
 for food in buffet:
     print(food)
+
+
+# if语句.if语句的核心是一个判断True or False的表达式，被称为条件测试。True就执行if条件下的代码，False就忽略这段代码。
+# 条件测试是一个判断True or False的表达式。条件测试的输出结果为True or False。
+# == 条件测试，是否等于。
+cars=['audi','bmw','subaru','toyota']
+
+for car in cars:
+    if car=='bmw':
+        print(car.upper())
+    else:
+        print(car.title())
+
+car='bmw'
+car=='bmw'
+car=='audi'
+
+car='audi'
+car.title()=='Audi'
+car  #条件测试没有改变存储在变量里的值
+
+
+# ！= 条件测试 是否不等于
+requested_topping='mushrooms'
+
+if requested_topping!='anchovies':
+    print('Hold the anchovies')
+
+if requested_topping=='mushrooms':
+    print('Put the mushrooms')
+
+
+answer=17
+
+if answer !=42:
+    print('That is not the correct answer! Pls try again.')
+
+
+#条件测试 > == < >= <= !=
+age=18
+age>19
+age<43
+age!=35
+age==36
+age>=8
+age<=9
+
+
+# 多个条件测试 and/or
+age_0=12
+age_1=18
+age_0>14 and age_1>=29
+
+age_0>=8 and age_1>=17
+
+age_0>=8 or age_1>=28
+
+(age_0>=80) or (age_1>=80)
+
+
+# 条件测试 in
+requested_toppings=['mushrooms','onions','pineapple']
+'mushrooms' in requested_toppings
+'bacon' in requested_toppings
+
+
+# not in 检查是否不包含
+
+banned_users=['andrew','david','caroline']
+user='maria'
+
+if user not in banned_users:
+    print(user.title()+', you can post a response as you wish.')
+
+
+#例题：检查用户是否banned，并发送不同提示信息
+banned_users=['andrew','david','caroline']
+
+if user in banned_users:
+    print('Sorry '+user.title()+', your account has been locked because of violating community rules.')
+if user not in banned_users:
+    print(user.title()+', you can post a response as you wish.')
+
+user='marie'
+user='caroline'
+
