@@ -221,3 +221,35 @@ Jojo_foods.append('Juice')
 print(my_foods)
 print(Jojo_foods)
 #两个列表的打印完全一样
+
+
+# 元组：元组储存一系列不可修改的元素。元组是不可变的列表。元组的值是不能修改的。元组用()标识。tuple_name()
+
+#修改元组变量虽然不能修改元组的元素，但可以给存储元组的变量赋值。可重新定义整个元组。
+
+dimensions=(200,50) #存储矩形的长宽
+print('Original dimensions:')
+for dimension in dimensions:
+    print(dimension)
+
+dimensions=(400,100) #给存储元组的变量重新赋值
+print('\nModified dimensions:')
+for dimension in dimensions:
+    print(dimension)
+
+#相比列表，元组是更简单的数据结构。如果需要存储的一组值在程序的整个生命周期内都不可变，用元组。
+
+#例题：自助餐厅的食品存储进元组
+buffet=('cream cake','coffee','steak','wine','paella')
+
+print('\nThe list of buffet cuisines is:')
+for food in buffet:
+    print(food)
+
+#buffet[0]='bread'  #error:元组的元素不可修改
+
+buffet=('kunafa','coffee','steak','wine','tiramisu')
+print('\nThe updated cuisine list for buffet is:')
+
+for food in buffet:
+    print(food)
