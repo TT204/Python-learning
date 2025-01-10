@@ -285,6 +285,27 @@ if requested_topping=='mushrooms':
     print('Put the mushrooms')
 
 
+# 布尔表达式，boolean,条件测试的别名，结果为True or False.
+
+car='subaru'
+print("Is car =='subaru'? I predict True.") #打印字符串
+print(car=='subaru') #打印布尔表达式的结果
+
+print("\nIs car == 'audi'? I predict false.")
+print(car=='audi')
+
+
+#例题：如何将一个列表关联到另一个元组的元素，并间接修改元组
+
+coffee_menu=['americano','latte','Irish coffee','Café au lait','Coffee Whipped Cream']
+buffet=('cream cake',coffee_menu,'steak','wine','paella')
+print(buffet)
+
+coffee_menu.append('Espresso')
+print(buffet)
+
+
+
 answer=17
 
 if answer !=42:
