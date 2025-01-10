@@ -474,3 +474,53 @@ for alien_color in alien_colors: # for循环，作用是遍历一遍列表,一�
         print('The player gained 5 points.')
 
 alien_color='red'
+
+
+alien_color in ['green','yellow','red']
+if alien_color=='green':
+    print('The player gained 5 points.')
+elif alien_color=='yellow':
+    print('The player gained 10 points.')
+else:
+    print('The player gained 15 points.')
+
+alien_color='green'
+alien_color='red'
+alien_color='yellow'
+
+
+#检查年龄
+age=
+
+if age<2:
+    print('He or She is an infant.')
+elif age<4:
+    print('He or She is learning for walk.')
+elif age<13:
+    print('He or She is a child.')
+elif age<20:
+    print('He or She is a teenager.')
+elif age<65:
+    print('He or She is an adult.')
+elif age>=65:
+    print('He or She is an elderly person.')
+
+
+#例题：检查是否是你喜欢的水果
+favorite_fruits=['watermelon','mango','banana','lemon']
+
+if 'apple' in favorite_fruits:
+    fruit='apple'
+    print('You really like '+fruit.lower()+'.')
+if 'watermelon' in favorite_fruits:
+    fruit='watermelon'
+    print('You really like '+fruit.lower()+'.')
+if 'mango' in favorite_fruits:
+    fruit='mango'
+    print('You really like '+fruit.lower()+'.')
+if 'passion fruit' in favorite_fruits:
+    fruit='passion fruit'
+    print('You really like '+fruit.lower()+'.')
+if 'lemon' in favorite_fruits:
+    fruit='lemon'
+    print('You really like '+fruit.lower()+'.')
