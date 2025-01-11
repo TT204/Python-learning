@@ -676,3 +676,84 @@ for num in numbers:
     else:
         print('\t'+str(num)+'th')
     
+
+#字典，是一系列键-值对。可以用键来访问对应的值。字典可储存的信息量不受限制
+#值可以是任何对象，包括列表、字典。
+#语法：dictionary_name={key0:value0,key1:value1}
+# 访问值：print(dictionary_name[key])
+
+alien_0={'color':'green','point':5}
+print(alien_0['color'])
+print(alien_0['point'])
+
+
+#添加键-值对
+#字典里键-值对的排列顺序不重要，键-值得一一对应关系重要。
+
+alien_0={'color':'green','point':5}
+alien_0['x_position']=0
+alien_0['y_positon']=25
+print(alien_0)
+
+
+#创建空字典，再往里添加键-值对
+
+alien_0={}
+alien_0['color']='green'
+alien_0['points']=5
+alien_0['x_position']=0
+alien_0['y_position']=25
+print(alien_0)
+
+
+#修改字典中的值
+
+alien_0={'color':'green','point':5}
+print('The alien is '+alien_0['color']+'.')
+
+alien_0['color']='yellow'
+print('The alien is now '+alien_0['color']+'.')
+
+
+#例题：通过修改字典中的值，对一个能够以不同速度移动的外星人的位置进行跟踪。
+
+alien_0={'x_position':0,'y_position':25,'speed':'medium'}
+print('Original x_position: '+str(alien_0['x_position']))
+
+
+if alien_0['speed']=='slow':
+    x_increment=1
+elif alien_0['speed']=='medium':
+    x_increment=2
+else:
+    x_increment=3
+
+#新位置等于老位置加上增量
+alien_0['x_position']=alien_0['x_position']+x_increment
+print('New x_positon: '+str(alien_0['x_position']))
+
+
+#删除字典里的键-值对,是永久删除
+
+alien_0={'x_position':0,'y_position':25,'speed':'medium'}
+del alien_0['speed']
+print(alien_0)
+
+
+#由多个类似对象组成的字典
+
+favorite_languages={'jen':'python','sarah':'c',
+                   'edward':'ruby','phil':'javascript'}
+print("Sarah's favorite language is "+
+      favorite_languages['sarah'].title()+'.')
+
+
+#例题：用字典存储个人信息并打印
+
+jasmine_info={'surname':'garment','first name':'jasmine','age':33,'city':'los angeles'}
+print('Surname: '+jasmine_info['surname'].title())
+print('First name: '+jasmine_info['first name'].title())
+print('Age: '+str(jasmine_info['age']))
+print('City: '+jasmine_info['city'].title())
+
+
