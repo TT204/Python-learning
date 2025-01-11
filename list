@@ -757,3 +757,147 @@ print('Age: '+str(jasmine_info['age']))
 print('City: '+jasmine_info['city'].title())
 
 
+# 遍历字典
+# 遍历字典的键-值对，语法：
+#for key,value in dictionary_name.items():
+#    print(key)
+#    print(str(value))
+#上面 key,value两个变量，可以用任何名称
+
+jasmine_info={'surname':'garment','first name':'jasmine','age':33,'city':'los angeles'}
+
+for key,value in jasmine_info.items():
+    print('\nKey: '+key)
+    print('Value: '+str(value))
+
+
+favorite_languages={'jen':'python','sarah':'c',
+                   'edward':'ruby','phil':'javascript'}
+
+for name,language in favorite_languages.items():
+    print(name.title()+"'s favorite language is "+language.title()+'.')
+
+
+#keys() 用于遍历字典中的所有键
+
+favorite_languages={'jen':'python','sarah':'c',
+                   'edward':'ruby','phil':'javascript'}
+
+for name in favorite_languages.keys():
+    print(name.title())
+
+
+#例题：当遇到朋友的名字时，打印一条特殊消息。
+
+favorite_languages={'jen':'python','sarah':'c',
+                   'edward':'ruby','phil':'javascript'}
+
+friends=['phil','sarah']
+
+for name in favorite_languages.keys():
+    print(name.title())
+
+    if name.lower() in friends:
+        print('Hi '+name.title()+
+              ', I see your favorite language is '+
+             favorite_languages[name].title()+'.')
+
+
+#keys()返回一个列表，里面包含字典里的所有键。
+
+favorite_languages={'jen':'python','sarah':'c',
+                   'edward':'ruby','phil':'javascript'}
+
+if 'erin' not in favorite_languages.keys():
+    print('Erin, please take our poll!')
+
+
+#遍历字典里的所有键，排序后返回结果,sorted(dictionary_name.keys())
+
+favorite_languages={'jen':'python','sarah':'c',
+                   'edward':'ruby','phil':'javascript'}
+
+for name in sorted(favorite_languages.keys()):
+    print(name.title()+', thank you for taking the poll.')
+
+
+# values() 返回字典中的所有值，遍历字典里的值
+
+favorite_languages={'jen':'python','sarah':'c',
+                   'edward':'ruby','phil':'javascript'}
+
+print('The following languages have been mentioned:')
+for language in favorite_languages.values():
+    print(language.title())
+
+print('\n')
+print(favorite_languages.values())
+
+
+# 如果字典中的值有重复的，需要排重，用set(dictionary_names.values())
+
+favorite_languages={'jen':'python','sarah':'c',
+                   'edward':'ruby','phil':'javascript',
+                   'jenny':'python','julian':'c'}
+
+print('The following languages have been mentioned:')
+for language in set(favorite_languages.values()):
+    print(language.title())
+
+
+# 如果字典中的值有重复的，需要排重，用set(dictionary_name.values())
+# 排序+排重：sorted(set(dictionary_name.values()))
+
+favorite_languages={'jen':'python','sarah':'c',
+                   'edward':'ruby','phil':'javascript',
+                   'jenny':'python','julian':'c'}
+
+print('The following languages have been mentioned:')
+for language in sorted(set(favorite_languages.values())):
+    print(language.title())
+
+
+#例题：对以下字典，遍历打印每一个键-值对
+
+jasmine_info={'surname':'garment','first name':'jasmine','age':33,'city':'los angeles'}
+
+#这里，数字33不能大写，必须单独区分出来
+unique_key=['age']
+
+for key,value in jasmine_info.items():
+    if key in unique_key:
+        print(key.title()+': '+str(value))
+    else:
+        print(key.title()+': '+value.title())
+              
+
+#例题：构建包含著名河流和流经国家的字典
+famous_rivers={'nile':'egypt','yangzi river':'china',
+               'amazon river':'peru'}
+
+for river,country in famous_rivers.items():
+    print('The '+river.title()+' runs through '+country.title()+'.')
+
+print('\n')
+
+for river in famous_rivers.keys():
+    print(river.title())
+
+print('\n')
+
+for country in famous_rivers.values():
+    print(country.title())
+
+
+#例题：对照名单邀请人们来参与调查
+favorite_languages={'jen':'python','sarah':'c',
+                   'edward':'ruby','phil':'javascript',
+                   'jenny':'python','julian':'c'}
+
+names=['jen','teresa','jasmine','jojo','julian','phil','joker']
+
+for name in names:
+    if name.lower() in favorite_languages.keys():
+        print(name.title()+', thank you for taking part in our investigation.')
+    else:
+        print(name.title()+', please take our poll!')
