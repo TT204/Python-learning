@@ -901,3 +901,126 @@ for name in names:
         print(name.title()+', thank you for taking part in our investigation.')
     else:
         print(name.title()+', please take our poll!')
+
+
+#嵌套:将列表存储进字典，或者字典存储进列表。或者字典嵌套字典。
+
+#创建一系列外星人的字典
+
+alien_0={'color':'green','points':5}
+alien_1={'color':'yellow','points':10}
+alien_2={'color':'red','points':15}
+
+#在列表里，alien_0等元素不是字符串，不加引号
+aliens=[alien_0,alien_1,alien_2]
+
+for alien in aliens:
+    print(alien)
+
+
+#例题：使用range()自动生成了30个外星人,每一个外星人是一个包含外星人信息的字典，aliens是字典集合的列表。
+aliens=[]
+
+#循环创建30个外星人
+for alien_number in range(0,30):
+    new_alien={'color':'green','points':5,
+               'speed':'slow'}
+    aliens.append(new_alien)
+
+#显示创建的30个外星人
+for alien in aliens[:30]:
+    print(alien)
+
+#显示创建的外星人个数
+print('\nTotal number of aliens are: '+str(len(aliens)))
+
+
+#将前3个外星人修改为黄色
+
+aliens=[]
+
+#循环创建30个外星人
+for alien_number in range(0,30):
+    new_alien={'color':'green','points':5,
+               'speed':'slow'}
+    aliens.append(new_alien)
+
+#每一个生成的外星人，都是一个字典
+#将前3个外星人修改为黄色,找到列表aliens的切片[:3],修改字典alien{}的键-值对
+for alien in aliens[0:3]:
+    if alien['color']=='green':
+        alien['color']='yellow'
+        alien['points']=10
+        alien['speed']='medium'
+
+#显示创建的30个外星人
+for alien in aliens[:30]:
+    print(alien)
+
+#显示创建的外星人个数
+print('\nTotal number of aliens are: '+str(len(aliens)))
+
+
+# 将列表存储在字典中
+
+#例题：Customers' orders in pizza shop 
+
+pizza={'crust':'thick',
+       'toppings':['mushrooms','extra cheese','green peppers']}
+
+print('You ordered a '+
+      pizza['crust']+'-crust pizza '+
+     'with the following toppings:')
+
+#遍历toppings列表，也就是pizza字典里，键toppings的值
+for topping in pizza['toppings']:
+    print('\t'+topping)
+
+
+#每当需要在字典中将一个键关联到多个值时，都可以在字典中嵌套一个列表。
+#例题：创建一份自助餐菜单，每一种菜品都包含多个菜式，打印这份菜单。
+
+#方法一：笨方法
+buffet={'cream cake':['cheese cake','berry cream cake','italian cream cake'],
+       'coffee':['irish coffee','latte','coffee au lait','iced americano'],
+       'steak':['t-bone','filet mignon','sirloin'],
+       'stew':['spicy turkey gumbo','chicken pot pie','slow cooker beef stew'],
+       'wine':['syrah','pinot noir','riesling','chardonnay']}
+
+print("Our Today's special menu is:\n")
+
+print('Cream Cake: ')
+for cuisine in buffet['cream cake']:
+    print('\t'+cuisine.title())
+
+print('Coffee: ')
+for cuisine in buffet['coffee']:
+    print('\t'+cuisine.title())
+   
+print('Steak: ') 
+for cuisine in buffet['steak']:
+    print('\t'+cuisine.title())
+
+print('Stew: ')
+for cuisine in buffet['stew']:
+    print('\t'+cuisine.title())
+    
+print('Wine: ')
+for cuisine in buffet['wine']:
+    print('\t'+cuisine.title())
+    
+
+#方法二：循环套循环，循环嵌套
+
+buffet={'cream cake':['cheese cake','berry cream cake','italian cream cake'],
+       'coffee':['irish coffee','latte','coffee au lait','iced americano'],
+       'steak':['t-bone','filet mignon','sirloin'],
+       'stew':['spicy turkey gumbo','chicken pot pie','slow cooker beef stew'],
+       'wine':['syrah','pinot noir','riesling','chardonnay']}
+
+print("Our Today's special menu is:\n")
+
+for cooking_type,cuisines in buffet.items():
+    print(cooking_type.title()+': ')
+    for cuisine in cuisines:
+        print('\t'+cuisine.title())
