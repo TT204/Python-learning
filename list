@@ -1065,3 +1065,44 @@ for pet,pet_info in pets.items():
     print("\tType: "+pet_info['type'].title())
     print("\tSubtype: "+pet_info['subtype'].title())
     print('\tOwner: '+pet_info['owner'].title()+'\n')
+
+
+#例题：打印出每个人最喜欢的地方
+favorite_places={'Konan':['tokyo',
+                          'kyoto',
+                          'osaka'],
+                'draco malfoy':['london',
+                                'paris',
+                                'Genève'],
+                'Michael De Santa':['los angeles',
+                                    'new york',
+                                    'san francisco']}
+
+for name,places in favorite_places.items():
+    print('\n'+name.title()+"'s favorite places are:")
+    for place in places:
+        print('\t'+place.title())
+
+
+#经典例题：字典里套字典，使用多个for循环嵌套打印所有信息
+
+cities={'new york':{'country':'usa',
+                    'population':'8.26 million',
+                    'flower of city':'wild rose'},
+       'tokyo':{'country':'japan',
+               'population':'14.18 million',
+               'flower of city':'Somei-yoshino cherry'},
+       'shanghai':{'country':'china',
+                   'population':'24.87 million',
+                   'flower of city':'white magnolia'}
+       }
+
+for city,info in cities.items():
+    print('\n'+'City: '+city.title())
+    
+    for city_info,info_answer in info.items():
+        if info_answer=='usa':
+            print('\t'+city_info.title()+': '+info_answer.upper())
+        else:
+            print('\t'+city_info.title()+': '+info_answer.title())
+        
