@@ -1106,3 +1106,56 @@ for city,info in cities.items():
         else:
             print('\t'+city_info.title()+': '+info_answer.title())
         
+
+#例题(好复杂)：列表中存储字典
+jasmine={'surname':'garment','first name':'jasmine','age':33,'city':'los angeles'}
+harry={'surname':'potter','first name':'harry','age':11,'city':'london'}
+conan={'surname':'Edogawa','first name':'conan','age':7,'city':'tokyo'}
+
+people=['jasmine','harry','conan']  #这里错了，jasmine作为列表名，不能加引号，否则变为字符串
+
+for name in people:
+    print(name.title()+"'s infomation: ")
+    print(name)
+#    for n in range(0,3):
+#        print(people[n])
+
+#以下为更正后的：
+jasmine={'surname':'garment','first name':'jasmine','age':33,'city':'los angeles'}
+harry={'surname':'potter','first name':'harry','age':11,'city':'london'}
+conan={'surname':'Edogawa','first name':'conan','age':7,'city':'tokyo'}
+
+people=[jasmine,harry,conan] 
+for name in people:
+    print(name)
+
+
+#接上面的例题（好复杂），如果要单项单项信息的打印，需要改为字典套字典的形式
+
+people={'jasmine':{'surname':'garment',
+                   'first name':'jasmine',
+                   'age':33,
+                   'city':'los angeles'},
+       'harry':{'surname':'potter',
+                'first name':'harry',
+                'age':11,
+                'city':'london'},
+       'conan':{'surname':'Edogawa',
+                'first name':'conan',
+                'age':7,
+                'city':'tokyo'}
+       }
+
+for name,info in people.items():
+    print('\n'+name.title()+"'s infomation: ")
+    
+    for info_type,info_detail in info.items():
+        #这里为什么不用else,或者指明surname,因为first name和surname会打印出两行重复的full name
+        if info_type=='first name':
+            full_name=info['first name']+' '+info['surname']
+            print('Full Name: '+full_name.title())
+        elif info_type=='age':
+            print(info_type.title()+': '+str(info_detail))
+        elif info_type=='city':
+            print(info_type.title()+': '+info_detail.title())
+
