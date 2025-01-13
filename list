@@ -1024,3 +1024,25 @@ for cooking_type,cuisines in buffet.items():
     print(cooking_type.title()+': ')
     for cuisine in cuisines:
         print('\t'+cuisine.title())
+
+
+#在字典中嵌套字典
+
+#例题：大字典存储用户名，小字典存储每一个用户的用户信息。按索引打印。
+
+users={'aeinstein':{'first name':'albert',
+                    'last name':'einstein',
+                    'location':'princeton'},
+       'mcurie':{'first name':'marie',
+                'last name':'curie',
+                 'location':'paris'} 
+      }
+
+for user,user_info in users.items():
+    print('User name: '+user.title())
+    
+    full_name=user_info['first name']+' '+user_info['last name']
+    print('\tFull name: '+full_name.title())
+    location=user_info['location']
+    print('\tLocation: '+location.title()+'\n')
+
