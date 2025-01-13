@@ -1046,3 +1046,22 @@ for user,user_info in users.items():
     location=user_info['location']
     print('\tLocation: '+location.title()+'\n')
 
+
+#例题：pets and owners
+
+pets={'simba':{'type':'cat',
+               'subtype':'dragon li',
+               'owner':'teresa'},
+     'Hachikō':{'type':'dog',
+                'subtype':'Japanese Akita',
+                'owner':'Hidesaburō Ueno'},
+      'Hedwig':{'type':'owl',
+                'subtype':'snowy owl',
+                'owner':'harry potter'}
+     }
+
+for pet,pet_info in pets.items():
+    print("Pet's Name: "+pet.title())
+    print("\tType: "+pet_info['type'].title())
+    print("\tSubtype: "+pet_info['subtype'].title())
+    print('\tOwner: '+pet_info['owner'].title()+'\n')
